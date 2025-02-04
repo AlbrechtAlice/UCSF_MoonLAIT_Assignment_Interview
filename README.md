@@ -58,17 +58,7 @@ For questions, please contact:
 
 ---
 
-## 📦 Dependencies
-This project uses Python and requires the following libraries:  
-- `numpy`  
-- `pandas`  
-- `lifelines`  
-- `matplotlib`  
-- Other dependencies are listed in **`requirements.txt`**.  
-
----
-
-## 🔧 Installation  
+## 📦 Installation  
 To install the required dependencies, run:  
 ```bash
 pip install -r requirements.txt
