@@ -98,14 +98,14 @@ def compute_spectral_hrv_metrics(nn_intervals):
     VHF_band = (0.4, 0.5)   
 
     # Integrate power using the trapezoidal rule for better accuracy
-    TOTPWR = np.trapezoid(psd, frequencies)  # Integrating over the entire frequency range
+    TOTPWR = np.trapz(psd, frequencies)  # Integrating over the entire frequency range
 
     # Compute power in the frequency bands
-    ULF = np.trapezoid(psd[(frequencies >= ULF_band[0]) & (frequencies <= ULF_band[1])], frequencies[(frequencies >= ULF_band[0]) & (frequencies <= ULF_band[1])])
-    VLF = np.trapezoid(psd[(frequencies >= VLF_band[0]) & (frequencies <= VLF_band[1])], frequencies[(frequencies >= VLF_band[0]) & (frequencies <= VLF_band[1])])
-    LF = np.trapezoid(psd[(frequencies >= LF_band[0]) & (frequencies <= LF_band[1])], frequencies[(frequencies >= LF_band[0]) & (frequencies <= LF_band[1])])
-    HF = np.trapezoid(psd[(frequencies >= HF_band[0]) & (frequencies <= HF_band[1])], frequencies[(frequencies >= HF_band[0]) & (frequencies <= HF_band[1])])
-    VHF = np.trapezoid(psd[(frequencies >= VHF_band[0]) & (frequencies <= VHF_band[1])], frequencies[(frequencies >= VHF_band[0]) & (frequencies <= VHF_band[1])])
+    ULF = np.trapz(psd[(frequencies >= ULF_band[0]) & (frequencies <= ULF_band[1])], frequencies[(frequencies >= ULF_band[0]) & (frequencies <= ULF_band[1])])
+    VLF = np.trapz(psd[(frequencies >= VLF_band[0]) & (frequencies <= VLF_band[1])], frequencies[(frequencies >= VLF_band[0]) & (frequencies <= VLF_band[1])])
+    LF = np.trapz(psd[(frequencies >= LF_band[0]) & (frequencies <= LF_band[1])], frequencies[(frequencies >= LF_band[0]) & (frequencies <= LF_band[1])])
+    HF = np.trapz(psd[(frequencies >= HF_band[0]) & (frequencies <= HF_band[1])], frequencies[(frequencies >= HF_band[0]) & (frequencies <= HF_band[1])])
+    VHF = np.trapz(psd[(frequencies >= VHF_band[0]) & (frequencies <= VHF_band[1])], frequencies[(frequencies >= VHF_band[0]) & (frequencies <= VHF_band[1])])
 
     # Normalize power in each band relative to total power (as percentage)
     ULF_norm = ULF / TOTPWR * 100
