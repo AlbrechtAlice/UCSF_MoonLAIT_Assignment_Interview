@@ -48,10 +48,10 @@ For questions, please contact:
   → Produces the output files: **`all_metrics.csv`** and **`avg_metrics.csv`**  
 
 - **`all_metrics.csv`**  
-  → Output file containing **detailed performance metrics** for each sleep stage.  
+  → Output file containing **detailed performance metrics** for each subject.  
 
 - **`avg_metrics.csv`**  
-  → Output file with **averaged performance scores** across all sleep stages.  
+  → Output file with **averaged performance scores** across all subjects.  
 
 - **`results_visualization.ipynb`**  
   → Jupyter Notebook for **visualizing and comparing sleep staging results**, including confusion matrices and performance metrics.  
